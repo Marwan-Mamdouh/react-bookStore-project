@@ -1,0 +1,20 @@
+.movie-card {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.movie-card img {
+  height: 200px;
+  object-fit: cover;
+}
+.movie-card .card-body {
+  flex: 1;
+  overflow: hidden;
+}
+.movie-card .card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
