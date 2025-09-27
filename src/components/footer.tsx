@@ -1,22 +1,20 @@
-import { Component, type ReactNode } from "react";
-import type ourState from "./interfaces";
+import { memo, useState } from "react";
+import type ourState from "../interfaces/interfaces";
 
-class Footer extends Component {
-  state: Readonly<ourState> = {
+const Footer = () => {
+  const [userData] = useState<ourState>({
     firstName: "Marwan",
     lastName: "AbdalMagied",
     age: 23,
     address: "Cairo",
-  };
+  });
 
-  render(): ReactNode {
-    return (
-      <footer>
-        firstName: {this.state.firstName}, lastName: {this.state.lastName}, age:
-        {this.state.age}, address: {this.state.address}
-      </footer>
-    );
-  }
-}
+  return (
+    <footer className="d-flex justify-content-center p-5">
+      firstName: {userData.firstName}, lastName: {userData.lastName}, age:
+      {userData.age}, address: {userData.address}
+    </footer>
+  );
+};
 
-export default Footer;
+export default memo(Footer);

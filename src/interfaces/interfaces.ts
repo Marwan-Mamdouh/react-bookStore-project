@@ -23,7 +23,7 @@ export interface IMovie {
 }
 
 export interface IMovies {
-  movies: IMovie[]
+  movies?: IMovie[]
 }
 
 export interface IUserData {
